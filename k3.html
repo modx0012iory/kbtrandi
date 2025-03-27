@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KS UPDATED WINGO</title>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'El Messiri', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: url('https://i.ibb.co/LdtcbSLX/74f09d279fb2e94226b2a889cac0a976.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+      
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 320px;
+            color: white;
+        }
+        .result-box {
+            margin: 20px 0;
+            font-size: 20px;
+        }
+        .result-text {
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+   <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev-->
+
+    <div class="container">
+        <h1>KS UPDATED K3</h1>
+        <div class="result-box">
+            <p>Period: <span id="period">000000</span></p>
+            <p>Timer: <span id="timer">00:60</span></p>
+            <p>Result: <span id="result" class="result-text">Pending...</span></p>
+        </div>
+    </div>
+   <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev-->
+    <script>
+        let lastPeriod = ""; 
+
+        function updatePeriodAndTimer() {
+            let now = new Date();
+            let calendar = new Date(now.getTime() + now.getTimezoneOffset() * 60000); 
+            let seconds = calendar.getSeconds();
+            let remainingSeconds = 60 - seconds;
+            let minutes = calendar.getMinutes();
+            let totalMinutes = calendar.getHours() * 60 + minutes;
+
+            let periodNumber = new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: '2-digit', day: '2-digit' })
+                .format(calendar)
+                .replace(/\//g, '') + "1000" + (10001 + totalMinutes);
+
+            if (periodNumber !== lastPeriod) {
+                lastPeriod = periodNumber;
+                generateResult(); 
+            }
+
+            document.getElementById("period").innerText = periodNumber;
+            document.getElementById("timer").innerText = `00:${String(remainingSeconds).padStart(2, '0')}`;
+
+            setTimeout(updatePeriodAndTimer, 1000);
+        }
+
+        function generateResult() {
+            let randomNumber = Math.floor(Math.random() * 100);
+            let oddEven = randomNumber % 2 === 0 ? "EVEN" : "ODD";
+            document.getElementById("result").innerText = oddEven;
+        }
+
+        updatePeriodAndTimer();
+    </script>
+   <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev-->
+</body>
+</html>

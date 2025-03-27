@@ -1,0 +1,199 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Updated Wingo Login Page</title>  
+   <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev-->
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&display=swap" rel="stylesheet">  
+    <style>  
+        * {  
+            margin: 0;  
+            padding: 0;  
+            box-sizing: border-box;  
+            font-family: 'El Messiri', sans-serif;  
+        }  
+        body {  
+            background: url('https://i.ibb.co/b5VyHR1h/74f09d279fb2e94226b2a889cac0a976.jpg') no-repeat center center/cover;  
+            height: 100vh;  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+            position: relative;  
+        }  
+        .login-text {  
+            position: absolute;  
+            top: 20px;  
+            right: 30px;  
+            font-size: 18px;  
+            font-weight: bold;  
+            color: white;  
+            cursor: pointer;  
+            background: rgba(0, 0, 0, 0.5);  
+            padding: 10px 15px;  
+            border-radius: 5px;  
+        }  
+        .holder {  
+            display: none;  
+            position: absolute;  
+            width: 300px;  
+            background: rgba(255, 255, 255, 0.2);  
+            padding: 20px;  
+            border-radius: 10px;  
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);  
+            backdrop-filter: blur(10px);  
+            transform: rotate(20deg);  
+            animation: rotateIn 0.5s forwards;  
+            color: white;  
+        }  
+        @keyframes rotateIn {  
+            from {  
+                transform: rotate(20deg) scale(0.8);  
+                opacity: 0;  
+            }  
+            to {  
+                transform: rotate(0deg) scale(1);  
+                opacity: 1;  
+            }  
+        }  
+        @keyframes rotateOut {  
+            from {  
+                transform: rotate(0deg) scale(1);  
+                opacity: 1;  
+            }  
+            to {  
+                transform: rotate(20deg) scale(0.8);  
+                opacity: 0;  
+            }  
+        }  
+        .close-btn {  
+            position: absolute;  
+            top: 10px;  
+            right: 10px;  
+            cursor: pointer;  
+        }  
+        .close-btn img {  
+            width: 30px;  
+            height: 30px;  
+        }  
+        .box h2 {  
+            text-align: center;  
+            margin-bottom: 20px;  
+        }  
+        .floating-img {  
+            display: block;  
+            margin: 0 auto 10px;  
+            width: 100px;  
+            animation: floatUpDown 2s infinite alternate ease-in-out;  
+        }  
+        @keyframes floatUpDown {  
+            from {  
+                transform: translateY(0px);  
+            }  
+            to {  
+                transform: translateY(-10px);  
+            }  
+        }  
+        .inputBox {  
+            position: relative;  
+            margin-bottom: 20px;  
+        }  
+        .inputBox input {  
+            width: 100%;  
+            padding: 10px;  
+            border: 1px solid rgba(255, 255, 255, 0.5);  
+            border-radius: 5px;  
+            outline: none;  
+            background: rgba(255, 255, 255, 0.2);  
+            color: white;  
+        }  
+        .inputBox span {  
+            position: absolute;  
+            left: 10px;  
+            top: 50%;  
+            transform: translateY(-50%);  
+            font-size: 14px;  
+            color: white;  
+            pointer-events: none;  
+            transition: 0.3s;  
+        }  
+        .inputBox input:focus + span,  
+        .inputBox input:valid + span {  
+            top: 5px;  
+            font-size: 12px;  
+            color: white;  
+        }  
+        input[type="submit"] {  
+            width: 100%;  
+            padding: 10px;  
+            border: none;  
+            background: rgba(255, 255, 255, 0.3);  
+            color: white;  
+            font-size: 16px;  
+            border-radius: 5px;  
+            cursor: pointer;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="login-text" onclick="showLogin()">Login</div>  
+
+    <div class="holder">  
+        <div class="box">  
+            <span class="close-btn" onclick="hideLogin()">  
+                <img src="https://i.ibb.co/wh38wDrS/Picsart-25-03-07-12-58-48-217.png" alt="Close">  
+            </span>  
+            <img src="https://i.ibb.co/G4K2gbqb/Picsart-25-03-02-22-15-39-762.png" class="floating-img" alt="Floating Image">  
+            <form onsubmit="return checkKey(event)">  
+                <h2>Hello User, please login</h2>  
+                <div class="inputBox">  
+                    <input type="password" id="key" required>  
+                    <span>Key</span>  
+                </div>  
+                <input type="submit" value="Login">  
+            </form>  
+        </div>  
+    </div>  
+   <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev-->
+    <audio id="backgroundMusic" loop>  
+        <source src="https://www.dropbox.com/scl/fi/your-audio-file.mp3?rlkey=yourkey&raw=1" type="audio/mpeg">  
+        Your browser does not support the audio element.  
+    </audio>  
+
+    <script>  
+        let audio = document.getElementById("backgroundMusic");  
+
+        function showLogin() {  
+            let holder = document.querySelector('.holder');  
+            holder.style.display = 'block';  
+            holder.style.animation = 'rotateIn 0.5s forwards';  
+
+         
+            audio.play().catch(error => console.log("Autoplay blocked:", error));  
+        }  
+
+        function hideLogin() {  
+            let holder = document.querySelector('.holder');  
+            holder.style.animation = 'rotateOut 0.5s forwards';  
+            setTimeout(() => {  
+                holder.style.display = 'none';  
+            }, 500);  
+        }  
+        ////Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+        //////////This Web Free By #enzo #dev-->
+
+        function checkKey(event) {  
+            event.preventDefault();  
+            let key = document.getElementById('key').value;  
+            if (key === "srs-baap-hai") {  
+                audio.play(); 
+                window.location.href = "game.html";  
+            } else {  
+                alert("Invalid key! Try again.");  
+            }  
+        }  
+    </script>  
+</body>  
+</html>

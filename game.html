@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ks Updated Wingo</title>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /*    <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev--> */
+        body {
+            font-family: 'El Messiri', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('https://i.ibb.co/b5VyHR1h/74f09d279fb2e94226b2a889cac0a976.jpg') no-repeat center center/cover; 
+            text-align: center;
+        }
+
+        /*    <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev--> */
+        .wave-container {
+            position: relative;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .wave-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+            position: relative;
+            display: flex;
+        }
+        
+        .wave-text span {
+            display: inline-block;
+            animation: wave-animation 1.5s infinite ease-in-out;
+        }
+        
+        .wave-text span:nth-child(1) { animation-delay: 0s; }
+        .wave-text span:nth-child(2) { animation-delay: 0.1s; }
+        .wave-text span:nth-child(3) { animation-delay: 0.2s; }
+        .wave-text span:nth-child(4) { animation-delay: 0.3s; }
+        .wave-text span:nth-child(5) { animation-delay: 0.4s; }
+        .wave-text span:nth-child(6) { animation-delay: 0.5s; }
+        .wave-text span:nth-child(7) { animation-delay: 0.6s; }
+        .wave-text span:nth-child(8) { animation-delay: 0.7s; }
+        .wave-text span:nth-child(9) { animation-delay: 0.8s; }
+        .wave-text span:nth-child(10) { animation-delay: 0.9s; }
+        .wave-text span:nth-child(11) { animation-delay: 1s; }
+        
+        @keyframes wave-animation {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* Card Styling */
+        p {
+            font-size: 14px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 380px;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 10px 0;
+            font-size: 17px;
+            font-weight: 600;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+            border: 2px solid transparent;
+            position: relative;
+            animation: pulse 2.5s infinite;
+            backdrop-filter: blur(10px); /*    <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+            <!-- This Web Free By #enzo #dev--> */
+            background: rgba(255, 255, 255, 0.2); /*    <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+            <!-- This Web Free By #enzo #dev--> */
+        }
+
+        .job-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .job-type {
+            font-size: 14px;
+            font-weight: bold;
+            opacity: 0.8;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .job-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .tag {
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-weight: bold;
+            margin-top: 5px;
+            display: inline-block;
+            color: white;
+        }
+
+        .apply-btn {
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /*    <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev--> */
+        .green { border-color: #4caf50; }
+        .yellow { border-color: #ffcc00; }
+        .red { border-color: #ff4c4c; }
+        .blue { border-color: #62a4f9; }
+
+        .tag-green { background: #4caf50; }
+        .tag-yellow { background: #ffcc00; }
+        .tag-red { background: #ff4c4c; }
+        .tag-blue { background: #007bff; }
+
+        .apply-green { background: #4caf50; }
+        .apply-yellow { background: #ff9800; }
+        .apply-red { background: #ff4c4c; }
+        .apply-blue { background: #007bff; }
+
+        /*    <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev--> */
+        @keyframes pulse {
+            50%, 50% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+    </style>
+</head>
+<body>
+
+       <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev-->
+    <div class="wave-container">
+        <h2 class="wave-text">
+            <span>W</span>
+            <span>E</span>
+            <span>L</span>
+            <span>C</span>
+            <span>O</span>
+            <span>M</span>
+            <span>E</span>
+            <span>&nbsp;</span>
+            <span>T</span>
+            <span>O</span>
+            <span>&nbsp;KS&nbsp;DASHBOARD</span>
+        </h2>
+    </div>
+
+    <p>Select your game type and play</p>
+
+      <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev-->
+    <div class="card green">
+        <div class="job-info">
+            <span class="job-type">Analys Sistem</span>
+            <span class="job-title">WINGO 30 SECOND</span>
+            <span class="tag tag-green">Big-Small</span>
+        </div>
+        <a href="wingo30s.html" class="apply-btn apply-green">Play Now →</a>
+    </div>
+
+     <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev-->
+    <div class="card yellow">
+        <div class="job-info">
+            <span class="job-type">Api Based</span>
+            <span class="job-title">WINGO 1 MINUTES</span>
+            <span class="tag tag-yellow">Big-Small</span>
+        </div>
+        <a href="wingo1m.html" class="apply-btn apply-yellow">Play Now →</a>
+    </div>
+
+      <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev-->
+    <div class="card red">
+        <div class="job-info">
+            <span class="job-type">Ai Calculation</span>
+            <span class="job-title">K3 LOTERIA</span>
+            <span class="tag tag-red">Odd-Even</span>
+        </div>
+        <a href="k3.html" class="apply-btn apply-red">Play Now →</a>
+    </div>
+
+       <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev-->
+    <div class="card blue">
+        <div class="job-info">
+            <span class="job-type">Calculation</span>
+            <span class="job-title">5D LOTERIA</span>
+            <span class="tag tag-blue">Odd-Even</span>
+        </div>
+        <a href="5D.html" class="apply-btn apply-blue">Play Now →</a>
+    </div>
+
+</body>
+</html>

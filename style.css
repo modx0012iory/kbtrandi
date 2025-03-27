@@ -1,0 +1,129 @@
+/*    <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev--> */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'El Messiri', sans-serif;
+    text-align: center;
+}
+
+body {
+    background: url('https://i.ibb.co/LdtcbSLX/74f09d279fb2e94226b2a889cac0a976.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+}
+
+/*    <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev--> */
+.header {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/*    <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev--> */
+.top-box, .analysis, .history {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+/*    <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev--> */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.box {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.green { background: rgba(0, 255, 0, 0.3); border: 1px solid green; }
+.red { background: rgba(255, 0, 0, 0.3); border: 1px solid red; }
+.blue { background: rgba(0, 0, 255, 0.3); border: 1px solid blue; }
+.grey { background: rgba(128, 128, 128, 0.3); border: 1px solid grey; }
+
+/*    <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev--> */
+.history {
+    padding-bottom: 20px;
+}
+
+#history-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#history-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#history-list th, #history-list td {
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+#history-list th {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/*    <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev--> */
+.win-text {
+    color: #00ff00;
+    font-weight: bold;
+    text-shadow: 0px 0px 8px rgba(0, 255, 0, 0.8);
+}
+
+.loss-text {
+    color: #ff0000;
+    font-weight: bold;
+    text-shadow: 0px 0px 8px rgba(255, 0, 0, 0.8);
+}
+
+.pending-text {
+    color: #ffff00;
+    font-weight: bold;
+}
+
+/*    <!--Ye website Team SRS ne leak ki hai aur aise saari websites ka source bhi leak hoga. DM karein for more source code aur follow karein @enzosrs -->
+   <!-- This Web Free By #enzo #dev--> */
+#clear-history {
+    margin-top: 10px;
+    padding: 5px 15px;
+    border: none;
+    background: red;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#clear-history:hover {
+    background: darkred;
+}
